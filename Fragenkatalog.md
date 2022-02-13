@@ -380,7 +380,14 @@ Fragen aus der Datei [Vorlesung](./Fragenkatalog/Borchert/07%20Optionen/Vorlesun
 <details><summary><b>Beschreiben und charakterisieren Sie Optionen in der Energiewirtschaft.</b></summary>
 <table><tr><td>
 
-TODO
+Optionen sind Wahlrechte und erzeugen eine Asymmetrie in Rechte und Pflichten. 
+Dabei kann der Basiswert der Option alles mögliche sein.
+Eine Option räumt einem Inhaber das Recht (aber keine Verpflichtung!) zum Kauf/Verkauf ab.
+Es kann deshalb zur Absicherung von Preisen genutzt werden.
+Der Verkäufer der Option trägt das Risiko und wird durch eine Optionsprämie entschädigt.
+
+- **Kaufoption (Call)**: Käufer [der Option] hat Recht auf Kauf.  
+- **Verkaufsoption (Put)**: Käufe [der Option] hat Recht auf Verkauf.
 
 
 </td></tr></table>
@@ -388,7 +395,7 @@ TODO
 <details><summary><b>Beschreiben Sie die Auszahlungsprofile einer Option? Warum sind die Auszahlungsprofile so geformt?</b></summary>
 <table><tr><td>
 
-TODO
+Optionen werden in der Regel nur finanziell erfüllt.
 
 
 </td></tr></table>
@@ -396,7 +403,7 @@ TODO
 <details><summary><b>Warum muss eine Option einen positiven Preis haben? Beschreiben Sie aus ökonomischer Sicht.</b></summary>
 <table><tr><td>
 
-TODO
+Der Käufer der Option erhält Rechte, während der Verkäufer Pflichten auf sich nimmt. Dafür muss dieser in Form einer Optionsprämie entschuldigt werden.
 
 
 </td></tr></table>
@@ -404,7 +411,9 @@ TODO
 <details><summary><b>Welche Spezifikationen hat eine Option? Wie unterscheiden sich europäische und amerikanische Optionen?</b></summary>
 <table><tr><td>
 
-TODO
+
+- **Amerikanische Option**: Bis zum Verfallstag ausübbar. (Zeitraum)
+- **Europäische Option**: Nur zu einem Zeipunkt ausübbar. 
 
 
 </td></tr></table>
@@ -412,7 +421,12 @@ TODO
 <details><summary><b>Beschreiben Sie die Einflussgrößen auf einen Optionspreis und die Art der Wirkung.</b></summary>
 <table><tr><td>
 
-TODO 
+- Volatilität (+)
+- Aktueller Kurs des Basiswerts (+)
+- Risikoloser Zins (+)
+- Dividenden (-)
+- Basispreis (-)
+- Restlaufzeit (tendenziell wertsteigernd) 
 
 
 </td></tr></table>
@@ -691,4 +705,4 @@ z.B. aktuelle Marktpreise, American Option, und Simulationsparameter (aus histor
 
 
 
-Generiert am Sun Feb 13 11:21:02 UTC 2022
+Generiert am Sun Feb 13 21:36:25 UTC 2022
