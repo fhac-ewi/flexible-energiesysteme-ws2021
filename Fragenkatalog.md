@@ -103,11 +103,21 @@ Die Wohlfahrt ist als Summe dieser beiden Renten.
 <details><summary><b>Variablen und fixen Kosten</b></summary>
 <table><tr><td>
 
+- **Variable Kosten** sind abhängig der produzierten Menge.
+- **Fixe Kosten** sind unabhängig der produzierten Menge. -> Fallen immer an.
+
 
 </td></tr></table>
 </details>
 <details><summary><b>Deckungsbeitrag</b></summary>
 <table><tr><td>
+
+Beschreibt, ab wann der Betrieb des Kraftwerks rentabel ist. Sprich die variablen Kosten gedeckt sind.
+
+``Deckungsbeitrag = Umsatz - variable Kosten``
+
+Deckungsbeitrag ist **nicht** der Gewinn. 
+``Gewinn = Deckungsbeiträge - (anteilige) Fixkosten``
 
 
 </td></tr></table>
@@ -115,18 +125,19 @@ Die Wohlfahrt ist als Summe dieser beiden Renten.
 <details><summary><b>Clean Spread</b></summary>
 <table><tr><td>
 
+Cleanspread ist der Deckungsbeitrag für 1 Mengeneinheit.
+
+```CS = DB / Menge``
+
 
 </td></tr></table>
 </details>
 <details><summary><b>Wieso sind VDK (variable Durchschnittskosten) als quadratische Funktion abgebildet? </b></summary>
 <table><tr><td>
 
-F41ff.
+Wegen dem Wirkungsgrad.
 
-</td></tr></table>
-</details>
-<details><summary><b></b></summary>
-<table><tr><td>
+F41ff.
 
 </td></tr></table>
 </details>
@@ -155,8 +166,11 @@ Marktstufen
 <details><summary><b>Beschreiben Sie genau, wie Anbieter und Nachfrager Gebote an dem Day-Ahead-Spotmarkt abgeben können (Kommunikationsprozess mit der Börse). Wie heißt das an der Börse stattfindende Auktionsverfahren? Welche Vor- und Nachteile hat dieses Verfahren?</b></summary>
 <table><tr><td>
 
-TODO
-
+- Über ein Frontend können Marktteilnehmer ihre Gebote abgeben.
+- Verdeckte zweiseitige Auktion + MCP
+  - Teilnehmer bieten Ihre Kapazitäten zu den Grenzkosten an, damit sie möglichst oft den Zuschlag erhalten
+  - Es entsteht eine Konsumenten und Produzentenrente
+  
 
 </td></tr></table>
 </details>
@@ -173,9 +187,10 @@ Der Verkaufspreis, zu dem Kraftwerke ihre Energie auf dem Markt anbietet, setzt 
 <details><summary><b>Welche Funktion und Bedeutung hat der Intradaymarkt? Vergleichen Sie das Preisbildungsverfahren am Intradaymarkt mit dem des Day-Ahead-Spotmarktes.</b></summary>
 <table><tr><td>
 
-TODO
-
-
+- Offenes Orderbuch (wenn Verkaufs und Kaufgebot passen, werden diese direkt gematcht)
+- Pay as Bid
+- Kurzfristige Handelsgeschäfte
+- Alle Teilnehmer haben die Möglichkeit ihr Portfolio auszugleichen.
 
 
 </td></tr></table>
@@ -202,7 +217,10 @@ Fragen aus der Datei [Vorlesung](./Fragenkatalog/Borchert/03%20Gebotsstratgeien/
 <details><summary><b>Beschreiben Sie detailliert anhand a) einer unelastischen Nachfrage, b) einer abschaltbaren Last, c) eines thermischen Kraftwerks, wie Sie Gebote für den Day-ahead-Spotmarkt formulieren würden. </b></summary>
 <table><tr><td>
 
-TODO
+Mithilfe bedingter und unbedingter Gebote.
+a. **unelastischen Nachfrage** (z.B. Bilanzkoordinator) -> unbedingtes Gebot
+b. **abschaltbaren Last** -> Mindestens Deckung der variablen Kosten -> bedingtes Gebot
+c. **thermischen Kraftwerks** -> Mindestens Deckung der variablen Kosten -> bedingtes Gebot
 
 
 </td></tr></table>
@@ -210,7 +228,10 @@ TODO
 <details><summary><b>Beschreiben Sie genau, wie Anbieter und Nachfrager Gebote an dem Day-Ahead-Spotmarkt abgeben können (Kommunikationsprozess mit der Börse). Wie heißt das an der Börse stattfindende Auktionsverfahren? Welche Vor- und Nachteile hat dieses Verfahren?</b></summary>
 <table><tr><td>
 
-TODO
+- Über ein Frontend können Marktteilnehmer ihre Gebote abgeben.
+- Verdeckte zweiseitige Auktion + MCP
+  - Teilnehmer bieten Ihre Kapazitäten zu den Grenzkosten an, damit sie möglichst oft den Zuschlag erhalten
+  - Es entsteht eine Konsumenten und Produzentenrente
 
 
 </td></tr></table>
@@ -218,7 +239,7 @@ TODO
 <details><summary><b>Welche Relevanz haben Blockgebote für Sie als a) Kraftwerks- und b) als Speicherbetreiber? Diskutieren Sie aus beiden Sichten die unterschiedlichen kennengelernten Arten von Blockgeboten.</b></summary>
 <table><tr><td>
 
-TODO
+Kraftwerke müssen aufgrund der Startkosten und Startdauer für eine gewisse Zeit am Stück laufen, damit sich diese rentieren. Deshalb sind Blockgebote, also für mehrere Stunden, für die Betreiber interessant. Auch Speicherbetreiber nutzen Blockgebote, da die Speicher ggf. Umrüstzeiten zwischen Ein und Ausspeicherung haben.
 
 
 </td></tr></table>
@@ -226,7 +247,11 @@ TODO
 <details><summary><b>Welche Funktion und Bedeutung hat der Intradaymarkt? Vergleichen Sie das Preisbildungsverfahren am Intradaymarkt mit dem des Day-Ahead-Spotmarktes.</b></summary>
 <table><tr><td>
 
-TODO
+- Offenes Orderbuch (wenn Verkaufs und Kaufgebot passen, werden diese direkt gematcht)
+- Pay as Bid
+- Kurzfristige Handelsgeschäfte
+- Alle Teilnehmer haben die Möglichkeit ihr Portfolio auszugleichen.
+
 
 
 </td></tr></table>
@@ -234,7 +259,9 @@ TODO
 <details><summary><b>Erläutern Sie das Rolling Intrinsic Verfahren detailliert an dem Beispiel eines trivialen/idealisierten Speichers.</b></summary>
 <table><tr><td>
 
-TODO
+- Durch das Rollen der Positionen zusätzliche Gewinne erzielen.
+- Verfahren wird vor Fälligkeit der Lieferung durchgeführt.
+- Ausnutzen fallender Preise (je näher es zum Lieferzeitpunkt geht)
 </td></tr></table>
 </details>
 
@@ -243,7 +270,9 @@ Fragen aus der Datei [Vorlesung](./Fragenkatalog/Borchert/06%20Forward%20und%20F
 <details><summary><b>Definition Forward</b></summary>
 <table><tr><td>
 
-Lieferung zu einem festen Preis
+- Lieferung einer konstante Leistung über einen bestimmten Zeitraum zu einem festen Preis
+- Over the Counter (bilaterales Handeln)
+- Kreditrisiko
 
 
 </td></tr></table>
@@ -251,7 +280,9 @@ Lieferung zu einem festen Preis
 <details><summary><b>Definition Future</b></summary>
 <table><tr><td>
 
-Finanzausgleich 
+- Finanzausgleich
+- Börslich gehandelt (Terminmarkt)
+- Kein Kreditrisiko
 
 
 </td></tr></table>
@@ -267,8 +298,8 @@ Bei **Termingeschäften** werden vor der Fälligkeit (also vereinbartes Lieferda
 | Future/Swap | |
 | Fahrplan | Vollversorgung |
 
-Bei einem **unbedingten** Termingeschäft sind beide Vertragspartner dazu Verpflichtet die Leistung am vereinbarten Termin zu erfüllen.
-Ein **bedingtes** Termingeschäft räumt einem der beiden Vertragspartner das Recht ein, das Geschäft verfallen zu lassen. (Optionen) Typischerweise erhält der andere Vertragspartner (ohne das Recht) dafür eine Gebühr. 
+Bei einem **unbedingten** Termingeschäft sind beide Vertragspartner dazu Verpflichtet die Leistung am vereinbarten Termin zu erfüllen. (symmetrische Rechte)
+Ein **bedingtes** Termingeschäft räumt einem der beiden Vertragspartner das Recht ein, das Geschäft verfallen zu lassen. (Optionen) Typischerweise erhält der andere Vertragspartner (ohne das Recht) dafür eine Gebühr/Optionsprämie. (asymetrische Rechte)
 
 
 </td></tr></table>
@@ -320,7 +351,9 @@ Kontrakt-Parameter:
 <details><summary><b>Was bedeutet Hedging? Erläutern Sie ausführlich das Konzept.</b></summary>
 <table><tr><td>
 
-TODO
+- Absicherung des Risikos mit entgegengerichteten Transaktionen.
+
+
 
 </td></tr></table>
 </details>
@@ -351,7 +384,9 @@ Der Käufer muss den von ihm gebotenen Kaufpreis zahlen.
 <details><summary><b>Beschreiben Sie das Margining-System an der EEX. Welchem Zweck dient dieses?</b></summary>
 <table><tr><td>
 
-TODO
+- Sicherstellung der Zahlungsfähigkeit aller Marktteilnehmer.
+- Damit man an Markt handeln darf, muss ``initial Margin`` gezahlt werden.
+- Falls Kontosaldo unter ``Maintainance Margin`` fällt, erhält der Marktteilnehmer einen Call und muss sein Konto auf ``initial Margin`` aufstocken.
 
 
 </td></tr></table>
@@ -361,7 +396,7 @@ TODO
 
 Die Kurven zeigen, wie sich die Preise in der nächsten Zeit entwickeln könnten.
 
-TODO Bewegungsmuster:
+Bewegungsmuster:
 - Wenn der Spotpreis **unter** dem im Forward festgesetzten Preis liegt, ist es in Normal Backwardation.
 - Wenn der Spotpreis **über** dem im Forward festgesetzten Preis liegt, ist es in Contango.
 
@@ -371,7 +406,9 @@ TODO Bewegungsmuster:
 <details><summary><b>Beschreiben Sie verschiedene Terminvermarktungsmöglichkeiten.</b></summary>
 <table><tr><td>
 
-TODO
+- Regelbasierte Vermarktung/Strategien
+- Marktorientierte Vermarktung/Strategien
+  - Zweitere werten – teilweise auch automatisiert – Marktdaten aus und agieren spekulativer.
 </td></tr></table>
 </details>
 
@@ -380,14 +417,14 @@ Fragen aus der Datei [Vorlesung](./Fragenkatalog/Borchert/07%20Optionen/Vorlesun
 <details><summary><b>Beschreiben und charakterisieren Sie Optionen in der Energiewirtschaft.</b></summary>
 <table><tr><td>
 
-Optionen sind Wahlrechte und erzeugen eine Asymmetrie in Rechte und Pflichten. 
+Optionen sind Wahlrechte und erzeugen eine Asymmetrie in Rechten und Pflichten. 
 Dabei kann der Basiswert der Option alles mögliche sein.
 Eine Option räumt einem Inhaber das Recht (aber keine Verpflichtung!) zum Kauf/Verkauf ab.
 Es kann deshalb zur Absicherung von Preisen genutzt werden.
 Der Verkäufer der Option trägt das Risiko und wird durch eine Optionsprämie entschädigt.
 
 - **Kaufoption (Call)**: Käufer [der Option] hat Recht auf Kauf.  
-- **Verkaufsoption (Put)**: Käufe [der Option] hat Recht auf Verkauf.
+- **Verkaufsoption (Put)**: Käufer [der Option] hat Recht auf Verkauf.
 
 
 </td></tr></table>
@@ -395,7 +432,7 @@ Der Verkäufer der Option trägt das Risiko und wird durch eine Optionsprämie e
 <details><summary><b>Beschreiben Sie die Auszahlungsprofile einer Option? Warum sind die Auszahlungsprofile so geformt?</b></summary>
 <table><tr><td>
 
-Optionen werden in der Regel nur finanziell erfüllt.
+Das Auszahlungsprofil ist um die Optionsprämie verschoben.
 
 
 </td></tr></table>
@@ -411,6 +448,11 @@ Der Käufer der Option erhält Rechte, während der Verkäufer Pflichten auf sic
 <details><summary><b>Welche Spezifikationen hat eine Option? Wie unterscheiden sich europäische und amerikanische Optionen?</b></summary>
 <table><tr><td>
 
+Spezifikationen
+- Optionsprämie
+- Basiswert 
+- Ausübungspreis
+- Fälligkeit
 
 - **Amerikanische Option**: Bis zum Verfallstag ausübbar. (Zeitraum)
 - **Europäische Option**: Nur zu einem Zeipunkt ausübbar. 
@@ -434,7 +476,11 @@ Der Käufer der Option erhält Rechte, während der Verkäufer Pflichten auf sic
 <details><summary><b>Erklären Sie die put-call-Parität. Was sagt sie aus? Warum gilt sie? </b></summary>
 <table><tr><td>
 
-TODO
+Der Preis einer PUT-Option kann aus dem Preis der CALL-Option ermittelt werden. (Unter der Vorraussetzung des gleichen Basiswerts, Fälligkeit, Ausübungspreis)
+
+Anhand der Parität kann man erkennen, ob im Markt ein Gleichgewicht herrscht.
+
+Falls ein Ungleichgewicht herrscht, besteht die Möglichkeit auf Arbitrage.
 
 
 </td></tr></table>
@@ -442,7 +488,7 @@ TODO
 <details><summary><b>Skizzieren und erläutern Sie die Wertgrenzen eines europäischen calls.</b></summary>
 <table><tr><td>
 
-TODO
+Ausübungspreis darf nicht höher als der Basiswert sein?
 
 
 </td></tr></table>
@@ -450,7 +496,7 @@ TODO
 <details><summary><b>Erklären Sie den Sinn der Bildung eines risikoneutralen Portfolios. Welche Konsequenzen hat dieses für die Bewertung der Option?</b></summary>
 <table><tr><td>
 
-TODO 
+Findung des fairen Preises der Option.  
 
 
 </td></tr></table>
@@ -458,7 +504,10 @@ TODO
 <details><summary><b>Erklären Sie den Optionspreis in einem Einperioden-Baum. Erklären Sie die „Wahrscheinlichkeiten“ p.</b></summary>
 <table><tr><td>
 
-TODO 
+- Baum beschreibt mögliche Preisentwicklung (up/down).
+- Eintrittswahrscheinlichkeit p sagt aus, wie wahrscheinlich die Ereignisse eintreten.
+- Aufstellen zweier Gleichungen (up/down) in Abhängigkeit von delta.
+- Daraus lässt sich der Optionspreis berechnen.
 
 
 </td></tr></table>
@@ -466,7 +515,7 @@ TODO
 <details><summary><b>Bei der Verwendung von p wurde erläutert, dass diese Wahrscheinlichkeiten in der risikoneutralen Welt darstellen. Welches Wachstum der Basiswerte implizieren diese Wahrscheinlichkeiten? Erklären Sie hieran die Transformation der realen Welt in eine risikofreie.</b></summary>
 <table><tr><td>
 
-TODO 
+Man geht davon aus, dass sich die reale Welt durch die risikofreie Welt abbilden lässt. 
 
 
 </td></tr></table>
@@ -474,7 +523,7 @@ TODO
 <details><summary><b>Wie und warum lassen sich die Parameter der Binomialverteilung aus Marktdaten errechnen?</b></summary>
 <table><tr><td>
 
-TODO
+Durch Marktanalyse.
 
 
 </td></tr></table>
@@ -482,7 +531,7 @@ TODO
 <details><summary><b>Was ist ein Delta? Wieso muss man das Delta von Zeitschritt zu Zeitschritt anpassen? Erläutern Sie den resultierenden Handel (das Delta-Hedging).</b></summary>
 <table><tr><td>
 
-TODO
+Bei Preisänderungen muss das Delta angepasst werden, damit das Portfolio weiterhin Risikoneutral ist.
 </td></tr></table>
 </details>
 
@@ -705,4 +754,4 @@ z.B. aktuelle Marktpreise, American Option, und Simulationsparameter (aus histor
 
 
 
-Generiert am Sun Feb 13 21:36:25 UTC 2022
+Generiert am Mon Feb 14 14:09:49 UTC 2022
