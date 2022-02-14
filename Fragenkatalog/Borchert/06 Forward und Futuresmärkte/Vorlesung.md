@@ -1,9 +1,13 @@
 # Definition Forward
-Lieferung zu einem festen Preis
+- Lieferung einer konstante Leistung über einen bestimmten Zeitraum zu einem festen Preis
+- Over the Counter (bilaterales Handeln)
+- Kreditrisiko
 
 
 # Definition Future
-Finanzausgleich 
+- Finanzausgleich
+- Börslich gehandelt (Terminmarkt)
+- Kein Kreditrisiko
 
 
 # Was sind Termingeschäfte? Was ist der Unterschied zwischen bedingten und unbedingten Termingeschäften?
@@ -15,8 +19,8 @@ Bei **Termingeschäften** werden vor der Fälligkeit (also vereinbartes Lieferda
 | Future/Swap | |
 | Fahrplan | Vollversorgung |
 
-Bei einem **unbedingten** Termingeschäft sind beide Vertragspartner dazu Verpflichtet die Leistung am vereinbarten Termin zu erfüllen.
-Ein **bedingtes** Termingeschäft räumt einem der beiden Vertragspartner das Recht ein, das Geschäft verfallen zu lassen. (Optionen) Typischerweise erhält der andere Vertragspartner (ohne das Recht) dafür eine Gebühr. 
+Bei einem **unbedingten** Termingeschäft sind beide Vertragspartner dazu Verpflichtet die Leistung am vereinbarten Termin zu erfüllen. (symmetrische Rechte)
+Ein **bedingtes** Termingeschäft räumt einem der beiden Vertragspartner das Recht ein, das Geschäft verfallen zu lassen. (Optionen) Typischerweise erhält der andere Vertragspartner (ohne das Recht) dafür eine Gebühr/Optionsprämie. (asymetrische Rechte)
 
 
 # Welche Eigenschaften hat ein Forward auf eine Aktie? Wie ist dagegen ein Forward auf eine Energielieferung definiert? 
@@ -52,7 +56,9 @@ Kontrakt-Parameter:
 
 
 # Was bedeutet Hedging? Erläutern Sie ausführlich das Konzept.
-TODO
+- Absicherung des Risikos mit entgegengerichteten Transaktionen.
+
+
 
 # Was bedeutet Arbitrage? Was bedeutet und impliziert ein arbitragefreier Markt?
 **Arbitrage** meint das risikofreie Ausnutzen von Kurs-, Zins- oder Preisunterschieden zu einem Zeitpunkt. Es werden zwei Handelsgeschäfte (Kauf und Verkauf von Energie), die zusammen einen Gewinn bringen, zeitgleich abgeschlossen. Anders als bei Spekulationen ist dies wirklich Risikofrei!
@@ -71,16 +77,20 @@ Der Käufer muss den von ihm gebotenen Kaufpreis zahlen.
 
 
 # Beschreiben Sie das Margining-System an der EEX. Welchem Zweck dient dieses?
-TODO
+- Sicherstellung der Zahlungsfähigkeit aller Marktteilnehmer.
+- Damit man an Markt handeln darf, muss ``initial Margin`` gezahlt werden.
+- Falls Kontosaldo unter ``Maintainance Margin`` fällt, erhält der Marktteilnehmer einen Call und muss sein Konto auf ``initial Margin`` aufstocken.
 
 
 # Was ist eine Forward- bzw. Futurekurve?  Welche Bewegungsmuster hat eine Forwardkurve?
 Die Kurven zeigen, wie sich die Preise in der nächsten Zeit entwickeln könnten.
 
-TODO Bewegungsmuster:
+Bewegungsmuster:
 - Wenn der Spotpreis **unter** dem im Forward festgesetzten Preis liegt, ist es in Normal Backwardation.
 - Wenn der Spotpreis **über** dem im Forward festgesetzten Preis liegt, ist es in Contango.
 
 
 # Beschreiben Sie verschiedene Terminvermarktungsmöglichkeiten.
-TODO
+- Regelbasierte Vermarktung/Strategien
+- Marktorientierte Vermarktung/Strategien
+  - Zweitere werten – teilweise auch automatisiert – Marktdaten aus und agieren spekulativer.

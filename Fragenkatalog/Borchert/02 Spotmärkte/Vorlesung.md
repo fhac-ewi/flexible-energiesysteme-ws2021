@@ -10,8 +10,11 @@ Marktstufen
 
 
 # Beschreiben Sie genau, wie Anbieter und Nachfrager Gebote an dem Day-Ahead-Spotmarkt abgeben können (Kommunikationsprozess mit der Börse). Wie heißt das an der Börse stattfindende Auktionsverfahren? Welche Vor- und Nachteile hat dieses Verfahren?
-TODO
-
+- Über ein Frontend können Marktteilnehmer ihre Gebote abgeben.
+- Verdeckte zweiseitige Auktion + MCP
+  - Teilnehmer bieten Ihre Kapazitäten zu den Grenzkosten an, damit sie möglichst oft den Zuschlag erhalten
+  - Es entsteht eine Konsumenten und Produzentenrente
+  
 
 # Welche fundamentalen Einflussgrößen auf den Spotpreis sind vorstellbar? Beschreiben Sie detailliert die Wirkung des CO2-Preises auf die merit order.
 Die Merit-Order bestimmt den Gleichgewichtspreis und welche Käufer und Verkäufer den Zuschlag erhalten haben. 
@@ -20,9 +23,10 @@ Der Verkaufspreis, zu dem Kraftwerke ihre Energie auf dem Markt anbietet, setzt 
 
 
 # Welche Funktion und Bedeutung hat der Intradaymarkt? Vergleichen Sie das Preisbildungsverfahren am Intradaymarkt mit dem des Day-Ahead-Spotmarktes.
-TODO
-
-
+- Offenes Orderbuch (wenn Verkaufs und Kaufgebot passen, werden diese direkt gematcht)
+- Pay as Bid
+- Kurzfristige Handelsgeschäfte
+- Alle Teilnehmer haben die Möglichkeit ihr Portfolio auszugleichen.
 
 
 # Warum existiert ein europäischer Handel? Was limitiert diesen Handel? Angenommen, Sie müssten eine Investition in eine zwei Marktgebiete verbindende Kuppelkapazität genehmigen, worauf würden Sie achten? Erläutern Sie anhand der beiden Marktdiagramme.

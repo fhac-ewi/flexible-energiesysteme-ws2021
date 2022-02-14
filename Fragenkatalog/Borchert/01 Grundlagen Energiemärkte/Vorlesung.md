@@ -73,12 +73,27 @@ Die Wohlfahrt ist als Summe dieser beiden Renten.
 
 
 # Variablen und fixen Kosten
+- **Variable Kosten** sind abhängig der produzierten Menge.
+- **Fixe Kosten** sind unabhängig der produzierten Menge. -> Fallen immer an.
+
 
 # Deckungsbeitrag
+Beschreibt, ab wann der Betrieb des Kraftwerks rentabel ist. Sprich die variablen Kosten gedeckt sind.
+
+``Deckungsbeitrag = Umsatz - variable Kosten``
+
+Deckungsbeitrag ist **nicht** der Gewinn. 
+``Gewinn = Deckungsbeiträge - (anteilige) Fixkosten``
+
 
 # Clean Spread
+Cleanspread ist der Deckungsbeitrag für 1 Mengeneinheit.
+
+```CS = DB / Menge``
+
 
 # Wieso sind VDK (variable Durchschnittskosten) als quadratische Funktion abgebildet? 
+Wegen dem Wirkungsgrad.
+
 F41ff.
 
-# 
